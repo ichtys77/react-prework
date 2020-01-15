@@ -8,7 +8,9 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>React 'apka'</h1>
         <h2 className={styles.subtitle}>Jedziemy z koksem</h2>
-        <List />
+        <List title={['JEST ROBOTAAAA! ', <sup key='1'>już wkrótce!</sup>]}>
+          
+        </List>
       </main>
     )
   }
