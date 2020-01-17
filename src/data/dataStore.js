@@ -11,14 +11,14 @@ export const settings = {
 };
 
 export const pageContents = {
-  title: 'My first React app',
-  subtitle: 'A simple to-do app, with lists, columns and cards',
+  title: 'React apka',
+  subtitle: 'Jedziemy z koksem',
 };
 
 export const listData = {
-  title: 'Things to do <sup>soon!</sup>',
-  description: 'Interesting things I want to check out!',
-  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  title: 'JEST ROBOTAAAA! <sup>już wkrótce!</sup>',
+  description: 'Pewnie się za nią wezmę jutro, pojutrze lub za rok!',
+  imageSrc: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   columns: [
     {
       key: 0,

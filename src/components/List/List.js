@@ -2,28 +2,32 @@ import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import PropTypes from 'prop-types';
-import Column from '../Column/Column.js'
+import Column from '../Column/Column.js';
+import {settings} from '../../data/dataStore';
+import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
     static propTypes = {
         title: PropTypes.node.isRequired,
         imageSrc: PropTypes.string.isRequired,
-        children: PropTypes.node,
+        description: PropTypes.node,
+        columns: PropTypes.array,
+
     }
     static defaultProps = {
-        children: <p>Mogę wszystko, ale czy mi się chce??</p>,
+        description: settings.defaultListDescription,
     }
     render() {
         return (
             <section className={styles.component}>
-                <Hero titleText={this.props.title} imageSrc={this.props.imageSrc}/>
+                <Hero titleText={this.props.title} imageSrc={this.props.imageSrc} />
                 <div className={styles.description}>
-                    {this.props.children}
+                    {ReactHtmlParser(this.props.description)}
                 </div>
                 <div className={styles.columns}>
-                    <Column columnTitle={'Zakupy'}/>
-                    <Column columnTitle={'Nauka'}/>
-                    <Column columnTitle={'Łork'}/>
+                    <Column columnTitle={'Zakupy'} />
+                    <Column columnTitle={'Nauka'} />
+                    <Column columnTitle={'Łork'} />
                 </div>
             </section>
         )
