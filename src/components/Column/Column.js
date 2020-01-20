@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 
 const Column = props => (
     <section className={styles.component}>
-        <h3 className={styles.title}>{props.columnTitle}</h3>
+        <h3 className={styles.title}>{props.title}</h3>
     </section>
 );
 
 Column.propTypes = {
-    columnTitle: PropTypes.node.isRequired,
+    columnTitle: PropTypes.node,
   };
 
 export default Column;
