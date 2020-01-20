@@ -1,6 +1,6 @@
 export const settings = {
-  columnCreatorText: 'Add new column',
-  cardCreatorText: 'Add new card',
+  columnCreatorText: 'Dodaj nową listę',
+  cardCreatorText: 'Dodaj nowe zadanie',
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -22,27 +22,27 @@ export const listData = {
   columns: [
     {
       key: 0,
-      title: 'Books',
+      title: 'Nauka',
       icon: 'book',
       cards: [
         {
           key: 0,
-          title: 'This Is Going to Hurt',
+          title: 'Powtórzyć materiał z Reacta ;)',
         },
         {
           key: 1,
-          title: 'Interpreter of Maladies',
+          title: 'Zrobić zadanie dla chętnych',
         },
       ],
     },
     {
       key: 1,
-      title: 'Movies',
+      title: 'Filmy',
       icon: 'film',
       cards: [
         {
           key: 0,
-          title: 'Harry Potter',
+          title: 'Ogród Fauna',
         },
         {
           key: 1,
@@ -52,16 +52,16 @@ export const listData = {
     },
     {
       key: 2,
-      title: 'Games',
+      title: 'Rozrywka',
       icon: 'gamepad',
       cards: [
         {
           key: 0,
-          title: 'The Witcher',
+          title: 'Pograć...',
         },
         {
           key: 1,
-          title: 'Skyrim',
+          title: 'i jeszcze raz pograć',
         },
       ],
     },
