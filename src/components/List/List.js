@@ -8,54 +8,54 @@ import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator';
 
 class List extends React.Component {
-    state = {
-        columns: this.props.columns || [],
-    }
-    static propTypes = {
-        title: PropTypes.node.isRequired,
-        imageSrc: PropTypes.string.isRequired,
-        description: PropTypes.node,
-        columns: PropTypes.array,
+  state = {
+    columns: this.props.columns || [],
+  }
+  static propTypes = {
+    title: PropTypes.node.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+    description: PropTypes.node,
+    columns: PropTypes.array,
 
-    }
-    static defaultProps = {
-        description: settings.defaultListDescription,
-    }
+  }
+  static defaultProps = {
+    description: settings.defaultListDescription,
+  }
 
-    addColumn(title){
-        this.setState(state => (
+  addColumn(title) {
+    this.setState(state => (
+      {
+        columns: [
+          ...state.columns,
           {
-            columns: [
-              ...state.columns,
-              {
-                key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
-                title,
-                icon: 'list-alt',
-                cards: []
-              }
-            ]
-          }
-        ));
+            key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
+            title,
+            icon: 'list-alt',
+            cards: [],
+          },
+        ],
       }
+    ));
+  }
 
-    render() {
-        return (
-            <section className={styles.component}>
-                <Hero titleText={this.props.title} imageSrc={this.props.imageSrc} />
-                <div className={styles.description}>
-                    {ReactHtmlParser(this.props.description)}
-                </div>
-                <div className={styles.columns}>
-                    {this.state.columns.map(({ key, ...columnProps }) => (
-                        <Column key={key} {...columnProps} />
-                    ))}
-                </div>
-                <div className={styles.creator}>
-                    <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
-                </div>
-            </section>
-        )
-    }
+  render() {
+    return (
+      <section className={styles.component}>
+        <Hero titleText={this.props.title} imageSrc={this.props.imageSrc} />
+        <div className={styles.description}>
+          {ReactHtmlParser(this.props.description)}
+        </div>
+        <div className={styles.columns}>
+          {this.state.columns.map(({ key, ...columnProps }) => (
+            <Column key={key} {...columnProps} />
+          ))}
+        </div>
+        <div className={styles.creator}>
+          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
+        </div>
+      </section>
+    );
+  }
 }
 
 export default List;
