@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Container.scss';
 import PropTypes from 'prop-types';
 
-
+{/*
 class Container extends React.Component {
   static propTypes = {
     children: PropTypes.node,
@@ -16,18 +16,18 @@ class Container extends React.Component {
     );
   }
 }
+*/}
 
 
-{/*
-const Container = props => {
+const Container = ({children}) => (
   <div className={styles.component}>
-    {props.children}
+    {children}
   </div>
-}
+);
 
 Container.propTypes = {
   children: PropTypes.node,
 };
-*/}
+
 
 export default Container;
