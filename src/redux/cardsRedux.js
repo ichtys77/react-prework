@@ -1,7 +1,7 @@
 import shortid from 'shortid';
 
 // selectors
-export const getCardsForColumn = ({cards, searchString}, columnId) => cards.filter(card => 
+export const getCardsForColumn = ({ cards, searchString }, columnId) => cards.filter(card =>
   card.columnId == columnId && new RegExp(searchString, 'i').test(card.title));
 
 // action name creator
@@ -20,10 +20,25 @@ export const createAction_moveCard = payload => ({ payload, type: MOVE_CARD });
 // console.log({createAction_moveCard});
 
 // reducer
-export default function reducer(state = [], action = {}) {
+export default function reducer(state = [], statePart = [], action = {}) {
   switch (action.type) {
     case ADD_CARD:
       return [...state, action.payload];
+
+    case MOVE_CARD: {
+      const { id, src, dest } = action.payload;
+      const targetCard = statePart.filter(card => card.id == id)[0];
+      const targetColumnCards = statePart.filter(card => card.columnId == dest.columnId).sort((a, b) => a.index - b.index);
+      console.log({ targetCard });
+      console.log(targetColumnCards.map(card => `${card.index}, title: ${card.title}`));
+
+      if (dest.columnId == src.columnId) {
+        console.log('test');
+      } else {
+        return statePart;
+      }
+    }
+      break;
     default:
       return state;
   }
