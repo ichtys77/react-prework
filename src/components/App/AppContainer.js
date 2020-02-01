@@ -12,6 +12,6 @@ const mapDispatchToProps = (dispatch) => ({
   moveCard: payload => dispatch(createAction_moveCard(payload)),
 });
 
-console.log({mapDispatchToProps});
+//console.log({mapDispatchToProps});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

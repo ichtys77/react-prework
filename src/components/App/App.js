@@ -17,6 +17,7 @@ class App extends React.Component {
   render() {
     const { title, subtitle, lists, moveCard } = this.props;
     const moveCardHandler = result => {
+      //console.log('result ', result);
       if (
         result.destination
         &&
