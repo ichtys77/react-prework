@@ -6,12 +6,44 @@ export const settings = {
     buttonCancel: 'Cancel',
     defaultText: 'Add new item',
   },
+
+  defaultListDescription: '<p>I can do all the things!!!</p>',
+  defaultColumnIcon: 'list-alt',
+
   search: {
     defaultText: 'Search...',
     icon: 'search',
   },
-  defaultListDescription: '<p>I can do all the things!!!</p>',
-  defaultColumnIcon: 'list-alt',
+
+  navbar: {
+    toHome: '/',
+    toInfo: '/info',
+    toFAQ: '/faq',
+    icon: 'clipboard-list',
+    classNameActive: 'active',
+  },
+
+  home: {
+    title: 'Things to do <sup>soon!</sup>',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+
+  info: {
+    title: 'INFO',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    containerTitle: 'Info',
+    containerText: 'Lorem dżipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+
+  FAQ: {
+    title: 'FAQ',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    question1: 'Question 1',
+    answer1: 'Honorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    question2: 'Question 1',
+    answer2: 'Maiorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+
 };
 
 export const pageContents = {
@@ -22,7 +54,7 @@ export const pageContents = {
 export const listData = {
   title: 'JEST ROBOTAAAA! <sup>już wkrótce!</sup>',
   description: 'Pewnie się za nią wezmę jutro, pojutrze lub za rok!',
-  imageSrc: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   columns: [
     {
       key: 0,
