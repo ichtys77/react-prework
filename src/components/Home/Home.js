@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.scss';
-import List from '../List/ListContainer';
+import ListLink from '../ListLink/ListLink';
 import PropTypes from 'prop-types';
 import { DragDropContext } from 'react-beautiful-dnd';
 
@@ -45,7 +45,7 @@ class Home extends React.Component {
         <h2 className={styles.subtitle}>{subtitle}</h2>
         <DragDropContext onDragEnd={moveCardHandler}>
           {lists.map(listData => (
-            <List key={listData.id} {...listData} />
+            <ListLink key={listData.id} {...listData} />
           ))}
         </DragDropContext>
       </main>
