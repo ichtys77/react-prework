@@ -1,10 +1,11 @@
 import initialStoreData from './../data/dataStore';
 
 // selectors
-export const getCardsForColumn = ({cards}, columnid) => cards.filter(card => card.columnid == columnid);
-export const getSearchCardsForColumn = ({ cards, columns } , searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).map(card => ({
+export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
+export const getSearchCardsForColumn = ({ cards, columns/*, lists */ } , searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).map(card => ({
   ...card,
-  columnName: columns.find(col => col.id === card.columnid).title,
+  columnName: columns.find(col => col.id === card.columnId).title,
+  //listName: lists.find(list => list.id === card.listId).title,
 }));
 export const countAllCards = ({ cards }) => cards.length;
 
