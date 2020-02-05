@@ -50,7 +50,7 @@ const List = props => (
 
   <section className={styles.component}>
     <Container>
-      <Hero title={props.title} imageSrc={props.image} />
+      <Hero title={props.title} image={props.image} />
       <div className={styles.description}>
         {ReactHtmlParser(props.description)}
       </div>
