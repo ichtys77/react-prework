@@ -6,7 +6,7 @@ import { settings } from '../../data/dataStore';
 
 const FAQ = props => (
   <Container>
-    <Hero titleText={props.title} imageSrc={props.image} />
+    <Hero title={props.title} image={props.image} />
     <h2>{props.question1}</h2>
     <p>{props.answer1}</p>
     <h2>{props.question2}</h2>

@@ -6,7 +6,7 @@ import { settings } from '../../data/dataStore';
 
 const Info = props => (
   <Container>
-    <Hero titleText={props.title} imageSrc={props.image} />
+    <Hero title={props.title} image={props.image} />
     <h2>{props.containerTitle}</h2>
     <p>{props.containerText}</p>
   </Container>

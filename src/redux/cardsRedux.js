@@ -22,7 +22,7 @@ export const ADD_CARD = createActionName('ADD_CARD');
 export const createActionAddCard = payload => ({ payload: { ...payload, id: `card-${countAllCards(initialStoreData) + 1}`}, type: ADD_CARD });
 //console.log({createActionAddCard});
 
-//export const createAction_moveCard = payload => ({ payload, type: MOVE_CARD });
+//export const createAction_moveCaZrd = payload => ({ payload, type: MOVE_CARD });
 //console.log({createAction_moveCard});
 
 // reducer
